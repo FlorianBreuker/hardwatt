@@ -1,11 +1,11 @@
 <script>
-    import GenericModal from "$lib/components/AddSetup/GenericModal.svelte";
+    import GenericModal from "$lib/components/AddSetup/AddModal/GenericModal.svelte";
 
     let config = {
         modalId: 'AddModal1',
         nextModalId: 'AddModal2',
         prevModalId: 'AddModal1',
-        infoText: 'Test 1',
+        infoText: '1/4: Power Consumption',
         gridLayout: 'md:grid-cols-[0.6fr_0.6fr_1fr_0.4fr]',
         inputFields: [
             {label: 'idle power', placeholder: 'in Watt'},

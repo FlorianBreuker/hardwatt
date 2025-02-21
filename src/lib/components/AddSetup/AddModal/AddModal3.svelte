@@ -1,11 +1,11 @@
 <script>
-    import GenericModal from "$lib/components/AddSetup/GenericModal.svelte";
+    import GenericModal from "$lib/components/AddSetup/AddModal/GenericModal.svelte";
 
     let config = {
         modalId: 'AddModal3',
         nextModalId: 'AddModal4',
         prevModalId: 'AddModal2',
-        infoText: 'Test 2',
+        infoText: '3/4: Storage & PSU',
         gridLayout: 'md:grid-cols-4',
         inputFields: [
             {label: 'RAM ', placeholder: 'Type here'},

@@ -1,17 +1,20 @@
 <script>
-import Plus from "$lib/components/Icons/Plus.svelte";
-import Add1 from "$lib/components/Add1.svelte";
-import Add2 from "$lib/components/Add2.svelte";
-import Add3 from "$lib/components/Add3.svelte";
+    import Plus from "$lib/components/Icons/Plus.svelte";
+    import AddModal1 from "$lib/components/AddSetup/AddModal/AddModal1.svelte";
+    import AddModal2 from "$lib/components/AddSetup/AddModal/AddModal2.svelte";
+    import AddModal3 from "$lib/components/AddSetup/AddModal/AddModal3.svelte";
+    import AddModal4 from "$lib/components/AddSetup/AddModal/AddModal4.svelte";
 </script>
 
-<div class="mx-auto max-w-max fixed bottom-10 inset-x-0">
+<div class="mx-auto inset-x-0 max-w-max fixed bottom-10">
     <button class="btn bg-primary/10 w-20 h-12 rounded-4xl border-white"
-       onclick={()=>document.getElementById('add1').showModal()}>
+            onclick={()=>document.getElementById('AddModal1').showModal()}>
         <Plus/>
     </button>
 </div>
 
-<Add1/>
-<Add2/>
-<Add3/>
+<AddModal1/>
+<AddModal2/>
+<AddModal3/>
+<AddModal4/>
+

@@ -1,5 +1,5 @@
 <script>
-    import ToggleInput from "$lib/components/AddSetup/ToggleInput.svelte";
+    import ToggleInput from "$lib/components/AddSetup/AddModal/ToggleInput.svelte";
     import Close from "$lib/components/Icons/Close.svelte";
 
     let {
