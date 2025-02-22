@@ -10,8 +10,11 @@
         gridLayout,
         inputFields,
         selectFields,
-        toggleInputFields
+        toggleInputFields,
+        input = $bindable(),
     } = $props();
+
+    $inspect(input);
 </script>
 
 
@@ -21,7 +24,6 @@
         <div class="grid {gridLayout} gap-6">
             {#each inputFields as field}
                 <label class="input input-bordered flex items-center gap-2">
-                    {field.label}
                     <input type="text" class="grow" placeholder={field.placeholder}/>
                 </label>
             {/each}
