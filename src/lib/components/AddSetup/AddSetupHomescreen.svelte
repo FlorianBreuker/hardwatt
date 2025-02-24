@@ -4,22 +4,7 @@
     import AddModal2 from "$lib/components/AddSetup/AddModal/AddModal2.svelte";
     import AddModal3 from "$lib/components/AddSetup/AddModal/AddModal3.svelte";
     import AddModal4 from "$lib/components/AddSetup/AddModal/AddModal4.svelte";
-    import TestModal from "$lib/components/AddSetup/AddModal/TestModal.svelte";
-
-    let input = $state({
-        idle: "lol",
-        load: "",
-        measuringDevice: "",
-        cState: "",
-        motherboard: "",
-        cpu: "",
-        cpuCooler: "",
-        gpu: "",
-        os: "",
-        mouse: "",
-        keyboard: "",
-        monitor: "",
-    })
+    import Summary from "$lib/components/AddSetup/Summary.svelte";
 </script>
 
 <div class="mx-auto inset-x-0 max-w-max fixed bottom-10">
@@ -29,10 +14,9 @@
     </button>
 </div>
 
-<AddModal1 bind:input={input}/>
+<AddModal1/>
 <AddModal2/>
 <AddModal3/>
 <AddModal4/>
 
-<!--<TestModal bind:input={input}/>-->
-
+<Summary/>

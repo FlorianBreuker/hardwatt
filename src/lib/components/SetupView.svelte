@@ -85,7 +85,7 @@
         <div class="hidden md:block">C-State</div>
         <div>CPU</div>
         <div class="hidden md:block">Mainboard</div>
-        <div class="hidden md:block">OS</div>
+        <div class="hidden md:block">Power Supply</div>
         <div class="divider col-span-7 mt-0 mb-0"></div>
 
         {#each setups as setup, index}
@@ -95,7 +95,7 @@
                     cstate={setup.cstate}
                     cpu={setup.cpu}
                     mainboard={setup.mainboard}
-                    os={setup.os}
+                    psu={setup.psu}
                     index={index}
                     {setup}
             />

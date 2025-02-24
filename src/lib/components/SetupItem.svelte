@@ -7,7 +7,7 @@
         cstate,
         cpu,
         mainboard,
-        os,
+        psu,
         index,
         setup
     } = $props();
@@ -28,7 +28,7 @@
         <div class="hidden md:block">{cstate}</div>
         <div>{cpu}</div>
         <div class="hidden md:block">{mainboard}</div>
-        <div class="hidden md:block">{os}</div>
+        <div class="hidden md:block">{psu}</div>
     </div>
     <div class="collapse-content grid grid-cols-subgrid col-span-7 p-0 text-xs">
         <CollapsedSetupView {setup}/>

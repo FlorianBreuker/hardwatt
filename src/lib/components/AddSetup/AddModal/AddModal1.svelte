@@ -1,28 +1,23 @@
 <script>
-    import GenericModal from "$lib/components/AddSetup/AddModal/GenericModal.svelte";
+    import GenericModal from "$lib/components/AddSetup/AddModal/Elements/GenericModal.svelte";
 
     let config = {
         modalId: 'AddModal1',
         nextModalId: 'AddModal2',
         prevModalId: 'AddModal1',
         infoText: '1/4: Power Consumption',
-        gridLayout: 'md:grid-cols-[0.6fr_0.6fr_1fr_0.4fr]',
+        gridLayout: 'md:grid-cols-[0.8fr_0.8fr_1fr_0.5fr]',
         inputFields: [
-            {label: 'idle power', placeholder: 'in Watt', bindId: 'idle'},
-            {label: 'load power', placeholder: 'in Watt', bindId: 'load'},
-            {label: 'measuring device', placeholder: 'in Watt', bindId: 'measuringDevice'},
+            {bindId: 'idle'},
+            {bindId: 'load'},
+            {bindId: 'measuringDevice'},
         ],
         selectFields: [
             {
-                label: 'C-States',
-                options: ['C1', 'C2', 'C3', 'C4', 'C5', 'C6', 'C7', 'C8', 'C9', 'C9'],
-                bindId: 'cState'
+                bindId: 'cState',
             },
         ]
     }
-
-    let {input = $bindable()} = $props();
-
 </script>
 
-<GenericModal bind:input={input} {...config}/>
+<GenericModal {...config}/>

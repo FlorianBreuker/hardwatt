@@ -1,19 +1,19 @@
 <script>
-    import GenericModal from "$lib/components/AddSetup/AddModal/GenericModal.svelte";
+    import GenericModal from "$lib/components/AddSetup/AddModal/Elements/GenericModal.svelte";
 
     let config = {
         modalId: 'AddModal4',
-        nextModalId: 'SummaryModal',
+        nextModalId: 'AddSummary',
         prevModalId: 'AddModal3',
         infoText: '4/4: OS & Peripherals',
         gridLayout: 'md:grid-cols-4',
         inputFields: [
-            {label: 'OS ', placeholder: 'Type here'},
+            {bindId: 'os'},
         ],
         toggleInputFields: [
-            {toggleLabelL: "mouse", inputLabel: "mouse"},
-            {toggleLabelL: "keyboard", inputLabel: "keyboard"},
-            {toggleLabelL: "monitor", inputLabel: "monitor"},
+            {bindId: 'mouse', toggleLabelL: "Mouse"},
+            {bindId: 'keyboard', toggleLabelL: "Keyboard"},
+            {bindId: 'monitor', toggleLabelL: "Monitor"},
         ]
     }
 </script>

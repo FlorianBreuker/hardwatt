@@ -1,5 +1,5 @@
 <script>
-    import ToggleInput from "$lib/components/AddSetup/AddModal/ToggleInput.svelte";
+    import ToggleInput from "$lib/components/AddSetup/AddModal/Elements/ToggleInput.svelte";
 </script>
 
 

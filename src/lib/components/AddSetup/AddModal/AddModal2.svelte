@@ -1,5 +1,5 @@
 <script>
-    import GenericModal from "$lib/components/AddSetup/AddModal/GenericModal.svelte";
+    import GenericModal from "$lib/components/AddSetup/AddModal/Elements/GenericModal.svelte";
 
     let config = {
         modalId: 'AddModal2',
@@ -8,12 +8,12 @@
         infoText: '2/4: Processors',
         gridLayout: 'md:grid-cols-4',
         inputFields: [
-            {label: 'motherboard', placeholder: 'Type here'},
-            {label: 'CPU', placeholder: 'Type here'},
-            {label: 'CPU cooler', placeholder: 'Type here'},
+            {bindId: 'motherboard'},
+            {bindId: 'cpu'},
+            {bindId: 'cpuCooler'},
         ],
         toggleInputFields: [
-            {toggleLabelL: "iGPU", toggleLabelR: "dGPU", inputLabel: "GPU"}
+            {bindId: 'gpu', toggleLabelL: "iGPU", toggleLabelR: "dGPU"}
         ]
     }
 </script>

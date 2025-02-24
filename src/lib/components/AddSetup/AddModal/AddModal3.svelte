@@ -1,5 +1,5 @@
 <script>
-    import GenericModal from "$lib/components/AddSetup/AddModal/GenericModal.svelte";
+    import GenericModal from "$lib/components/AddSetup/AddModal/Elements/GenericModal.svelte";
 
     let config = {
         modalId: 'AddModal3',
@@ -8,12 +8,12 @@
         infoText: '3/4: Storage & PSU',
         gridLayout: 'md:grid-cols-4',
         inputFields: [
-            {label: 'RAM ', placeholder: 'Type here'},
-            {label: 'boot drive ', placeholder: 'Type here'},
-            {label: 'PSU', placeholder: 'Type here'},
+            {bindId:'ram'},
+            {bindId: 'bootDrive'},
+            {bindId: 'psu'},
         ],
         toggleInputFields: [
-            {toggleLabelL: "power adapter", inputLabel: "power adapter"}
+            {bindId: 'powerAdapter', toggleLabelL: "Power Adapter"},
         ]
     }
 </script>
