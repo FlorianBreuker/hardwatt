@@ -41,9 +41,9 @@
                placeholder={field.placeholder}
                bind:value={field.value} onchange={handleChange} onfocus={() => showOptions = true}/>
     </label>
-    <ul class="bg-base-100 absolute top-10 max-h-30 border rounded-(--radius-field) overflow-auto z-2 p-2 {showOptions ? 'block' : 'hidden'}">
+    <ul class="bg-base-100 absolute top-10 max-h-30 border rounded-(--radius-field) overflow-auto z-2 py-2 {showOptions ? 'block' : 'hidden'}">
         {#each filterOptions as part}
-            <button type="button" class="w-full text-left p-1" onclick={() => selectOption(part)}>{part}</button>
+            <button type="button" class="w-full text-left p-2 hover:bg-base-300" onclick={() => selectOption(part)}>{part}</button>
         {/each}
     </ul>
 </div>

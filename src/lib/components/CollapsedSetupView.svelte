@@ -22,7 +22,7 @@
 
 </script>
 
-<div class="grid grid-cols-subgrid col-span-7">
+<div class="grid grid-cols-subgrid col-span-7 ml-2">
     <div class="col-span-7">
         <div class="divider mt-0 mb-0"></div>
         <div class="grid xl:grid-cols-4 md:grid-cols-2 font-normal text-xs 2xl:text-sm">

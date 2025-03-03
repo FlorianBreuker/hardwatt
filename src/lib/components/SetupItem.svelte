@@ -19,12 +19,12 @@
         role="button"
         class="
             {index % 2 === 0 ? 'bg-base-300' : 'bg-base-200'}
-            collapse grid grid-cols-subgrid col-span-8 text-xs md:text-sm px-2"
+            collapse grid grid-cols-subgrid col-span-8 text-xs md:text-sm"
 >
     <div
             class="collapse-title grid grid-cols-subgrid col-span-8 p-0 min-h-8 h-10 items-center"
     >
-        <div>{idle}</div>
+        <div class="ml-2">{idle}</div>
         <div>{load}</div>
         <div class="hidden xl:block">{cstate}</div>
         <div>{cpu}</div>
