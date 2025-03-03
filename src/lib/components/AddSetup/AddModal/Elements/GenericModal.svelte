@@ -4,6 +4,9 @@
     import ModalInput from "$lib/components/AddSetup/AddModal/Elements/ModalInput.svelte";
     import ModalSelect from "$lib/components/AddSetup/AddModal/Elements/ModalSelect.svelte";
 
+    import {input} from "$lib/components/AddSetup/state.svelte.js";
+    import ModalSearchInput from "./ModalSearchInput.svelte";
+
     let {
         modalId,
         nextModalId,
@@ -22,7 +25,7 @@
     const nextModal = (event) => {
         event.preventDefault();
 
-        if(event.target.checkValidity()) {
+        if (event.target.checkValidity()) {
             document.getElementById(modalId).close();
             document.getElementById(nextModalId).showModal();
         }
@@ -35,12 +38,16 @@
 </script>
 
 <dialog id="{modalId}" class="modal">
-    <div class="modal-box w-10/12 max-w-6xl bg-base-300 flex items-center justify-center py-20 rounded-2xl">
+    <div class="modal-box xl:h-1/3 w-10/12 max-w-6xl bg-base-300 flex items-center justify-center py-20 rounded-2xl">
         <div class="absolute top-5 left-5 md:text-lg font-black">{infoText}</div>
         <form onsubmit={nextModal}>
             <div class="grid {gridLayout} gap-6">
                 {#each inputFields as field}
-                    <ModalInput bindId={field.bindId}/>
+                    {#if input[field.bindId].type === "number"}
+                        <ModalInput bindId={field.bindId}/>
+                    {:else}
+                        <ModalSearchInput bindId={field.bindId}/>
+                    {/if}
                 {/each}
 
                 {#each selectFields as field}
@@ -61,7 +68,7 @@
                             onclick={backModal}>Back
                     </button>
                 {/if}
-                <button type="submit" class="btn btn-primary absolute right-5 bottom-5">Next
+                <button class="btn btn-primary absolute right-5 bottom-5">Next
                 </button>
             </div>
         </form>

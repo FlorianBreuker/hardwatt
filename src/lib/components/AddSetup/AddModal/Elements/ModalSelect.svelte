@@ -2,8 +2,6 @@
     import {input} from "$lib/components/AddSetup/state.svelte.js";
 
     let {bindId} = $props();
-
-    $inspect(input[bindId]);
 </script>
 
 <label class="select">

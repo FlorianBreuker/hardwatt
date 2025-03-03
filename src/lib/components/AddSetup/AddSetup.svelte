@@ -8,7 +8,7 @@
 </script>
 
 <div class="mx-auto inset-x-0 max-w-max fixed bottom-10">
-    <button class="btn bg-primary/10 w-20 h-12 rounded-4xl border-white"
+    <button class="btn bg-primary/70 w-20 h-12 rounded-4xl border-white"
             onclick={()=>document.getElementById('AddModal1').showModal()}>
         <Plus/>
     </button>
